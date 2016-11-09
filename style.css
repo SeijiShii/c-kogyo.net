@@ -3,6 +3,7 @@ body {
 }
 
 .div_site_title {
+  color: #999;
   position: relative;
   background-color: #ddd;
   height: 80px;
@@ -29,6 +30,40 @@ h2 {
   border-bottom: solid 5px #ddd;
 }
 
+h3 {
+  font-size: 22px;
+  border-bottom: solid 3px #ddd;
+}
+
+.div_footer {
+  clear: both;
+  border-top: solid 5px #ddd;
+  text-align: center;
+}
+
 .line_through {
   text-decoration: line-through;
+}
+
+.div_app_data {
+  padding: 5px;
+}
+
+.app_logo {
+  float: left;
+  height: 120px;
+  width: 120px;
+}
+
+.app_description {
+  float: right;
+
+}
+
+.clear-fix {
+  clear: both;
+}
+
+.google_badge {
+  float: right;
 }
