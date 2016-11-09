@@ -13,6 +13,19 @@
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
     <link href="style.css" rel="stylesheet" />
+    <script>
+      jQuery( function($) {
+  			$('tbody tr[data-href]').addClass('clickable').click( function() {
+  				window.location = $(this).attr('data-href');
+  			}).find('a').hover( function() {
+  				$(this).parents('tr').unbind('click');
+  			}, function() {
+  				$(this).parents('tr').click( function() {
+  					window.location = $(this).attr('data-href');
+  				});
+  			});
+  		});
+    </script>
   </head>
   <body>
     <div class="container-fluid">
@@ -28,6 +41,30 @@
         <p>
           室長が開発したアプリを紹介します。
         </p>
+        <table class="table table-hover">
+          <tr data-href="#">
+            <td>
+              <img src="images/rv_icon_30.png" alt="rv_icon" />
+            </td>
+            <td>
+              Return Visitor
+            </td>
+            <td>
+              JW向け訪問記録アプリ
+            </td>
+          </tr>
+          <tr data-href="#">
+            <td>
+              <img src="images/ssp_icon_30.png" alt="ssp_icon" />
+            </td>
+            <td>
+              Single Song Player
+            </td>
+            <td>
+              単曲再生プレーヤー
+            </td>
+          </tr>
+        </table>
         <h2>ブログ　本日のエラー</h2>
         <p class="line_through">
           珠玉のエラーたち
